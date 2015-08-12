@@ -1,7 +1,5 @@
 # Portfolio Website
 ###### by Lauren Kroner
----
-
 
 ##### Technologies Used:
 
