@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Lauren Kroner</title>
+</head>
+
+<body>
+
+<!--     Navbar      -->
+	<!-- *************** -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li class="navbar-item logo"><a href="#">Lauren Kroner</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+      		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars fa-2x"></i></a>
+      	  <ul class="dropdown-menu" role="menu">
+            <li><a href="#break">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="divider"></li>
+            <li><a href="https://medium.com/@lauren.kroner">Blog</a></li>
+      	  </ul>
+      	</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--    Home Page    -->
+	<!-- *************** -->
+	<section id="home" class="bg_parallax" data-type="background" data-speed="10">
+		  
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<h1 class="big-intro">Hi! My name is Lauren</h1><br><br><br>
+						<a href="./../public/pdfs/LaurenKroner.pdf" class="btn btn-default">Resume</a><br><br><br>
+			    	<h4 class="intro">I'm a web developer out of San Francisco.</h4>
+			    	<!-- <a href="#" alt="Next-Section"><i class="fa fa-chevron-down fa-3x"></i></a> -->
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					  <img src="../images/me1.jpg" alt="lauren picture" class="img-circle">
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- Experience Page -->
+	<!-- *************** -->
+	<section id="break" class="bg_parallax container-fluid" data-type="background" data-speed="80">
+		<h1>Top Experience / <span class="header-small">What I've Worked With</span></h1>
+		<div class="chart-container">
+			<div class="row">
+				<div class="chart col-xs-12 col-sm-6 col-md-6 col-lg-3" data-percent="73">73%
+					<h4>HTML5/CSS3</h4>
+				</div>
+				<div class="chart col-xs-12 col-sm-6 col-lg-3" data-percent="85">85%
+					<h4>JS/JQuery</h4>
+				</div>
+				<div class="chart col-xs-12 col-sm-6 col-lg-3" data-percent="92">92%
+					<h4>Ruby/Rails</h4>
+				</div>
+				<div class="chart col-xs-12 col-sm-6 col-lg-3" data-percent="86">86%
+					<h4>Git/Github</h4>
+				</div>
+			</div>
+		</div>
+
+		<a href="#" class="regular" alt="Next"><i class="fa fa-chevron-down fa-3x"></i></a>
+	</section>
+
+	<!--  Skills Banner  -->
+	<!-- *************** -->
+	<section id="skills" class="bg_parallax container-fluid" data-type="background" data-speed="80">
+		<div class="row">
+			<div class="title col-md-12 col-lg-12 col-xs-12">
+				<h4 class="inverse intro"> -- ADDITIONAL DEV SKILLS -- </h4>
+			</div>
+			<div class="list col-md-4 col-lg-4 col-xs-12"> 
+				<p>Responsive Design</p>
+				<p>Test Driven Development</p>
+				<p>Backbone</p>
+			</div>
+			<div class="list col-md-4 col-lg-4 col-xs-12"> 
+				<p>AJAX</p>
+				<p>Heroku</p>
+				<p>Node/Async</p>
+			</div>
+			<div class="list col-md-4 col-lg-4 col-xs-12"> 
+				<p>Object Oriented Design</p>
+				<p>SQL/Active Record/Redis/Mongo</p>
+				<p>Leadership</p>
+			</div>
+		</div>
+	</section>
+
+	<!--  Contact Page   -->
+	<!-- *************** -->
+	<section id="contact" class="bg_parallax container-fluid" data-type="background" data-speed="20">
+		<h1 class="inverse">Contact / <span class="header-small">Let's Talk</span></h1>
+		<div class="outro row">
+			<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4"></div>
+			<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 well well-lg ">
+				<form action="/" method="post">
+					<div class='form-group'>
+				    <input class="first-name form-control" type="text" name="first_name" placeholder="First">
+					</div>
+					<div class='form-group'>
+				    <input class="last-name form-control" type="text" name="last_name" placeholder="Last">
+					</div>
+					<div class='form-group'>
+				    <input class="email form-control" type="text" name="email" placeholder="Email">
+					</div>
+					<div class='form-group'>
+				    <input class="message form-control" type="textarea" name="message" placeholder="What's up?">
+					</div>
+					<div class='form-group'>
+				    <input class="btn btn-default" type="submit" value="Submit">
+					</div>
+			  </form>				
+				<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4"></div>
+			</div>
+		</div>
+		
+		<a href="#" class="inverse" alt="Next"><i class="fa fa-chevron-up fa-3x"></i></a>	 
+	</section>
+
+	<!-- Portfolio Page  -->
+	<!-- *************** -->
+<!-- 	<section id="blog" class="bg_parallax" data-type="background" data-speed="40">
+    <h1 class="inverse">Portfolio / <span class="header-small">Sample Work</span></h1>
+		<a href="#" class="inverse" alt="Next"><i class="fa fa-chevron-up fa-3x"></i></a>	
+	</section> -->
+
+	<!--   Footer Page   -->
+	<!-- *************** -->
+	<footer>
+		<p> &copy; Lauren Kroner | 2014 </p>
+		<div class="icons">
+	    <a href="https://github.com/Lkroner"><i class="fa fa-github fa-4x"></i></a>
+		  <a href="https://linkedin.com/in/laurenkroner"><i class="fa fa-linkedin-square fa-4x"></i></a>
+		  <a href="https://twitter.com/lkroner"><i class="fa fa-twitter fa-4x"></i></a>
+		</div>
+	</footer>
+
+
+
+
+
+  <script src="/js/application.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</body>
+</html>
