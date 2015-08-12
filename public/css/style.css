@@ -1,0 +1,250 @@
+body { 
+	color: gray;
+	font-family: 'Helvetica Neue', cursive;
+  margin:0;
+  padding-top: 0;
+}
+footer {
+	background-color: #202020;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: 200;
+	height: 100px;
+	padding: 5em;
+}
+footer .right {
+	float: right;
+}
+input {
+
+}
+.big-intro {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 80pt;
+	text-shadow: 3px 3px #202020;
+}
+.chart-container {
+	padding: 1em;
+	padding-top: 5em;
+	margin: 2em;
+}
+.chart {
+	padding: 2em;
+	text-align: center;
+}
+.fa-chevron-down {
+	position: absolute;
+	bottom: 75px;
+	text-align: center;
+}
+.fa-chevron-up{
+	position: absolute;
+	bottom: 75px;
+	text-align: center;
+}
+.header-small {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: 200;
+}
+.outro {
+	padding-top: 5em;
+	padding: 2em;
+	text-align: center;
+	width: ;
+}
+.outro h4 {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-weight: 200;
+}
+.outro .well{
+	background-color: rgba(32,32,32, 0.6);
+	/*border: 1px solid white;*/
+}
+.well input {
+	background-color: rgba(255,255,255, 0.1);
+	/*border: 1px solid white;*/
+	color: white;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+  color: white !important; 
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white !important;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white !important;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: white !important;
+}
+
+.icons a i{
+	padding: .2em;
+}
+.inverse {
+	color: white; 
+}
+.regular{
+	color: gray;
+}
+.logo {
+	font-family: "Montserrat", Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: 300;
+	color: blue;
+	text-transform: uppercase;
+}
+.intro {
+	color: white;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-weight: 400;
+	text-shadow: 1px 1px #202020;
+}
+#home {
+	background: url("../images/succulentsFade.png");
+	background-attachment: fixed;
+	background-clip: initial;
+	background-origin: initial;
+	background-size: cover;
+  background-position: 100% 0; 	
+	background-repeat: no-repeat;	
+	color: white;	
+	min-height: 100%;
+	padding: 1em;
+	padding-top: 9em;
+	position: relative;	
+	opacity: .8;
+	text-align: center;
+}
+#contact h1 {
+	/*padding: 10em;*/
+}
+#contact {
+	background: url("../images/ocean_beach.jpg");
+	background-attachment: fixed;
+	background-clip: initial;
+	background-origin: initial;
+	background-size: cover;
+  background-position: 100% 0; 	
+	background-repeat: no-repeat;
+	min-height: 400px;
+	padding: 1em;
+	position: relative;	
+}
+#blog {
+	background: url("../images/grafitti.png");
+	background-attachment: fixed;
+	background-clip: initial;
+	background-origin: initial;
+	background-size: cover;
+  background-position: 100% 0; 	
+	background-repeat: no-repeat;		
+	min-height: 100%;
+	padding: 10em;
+	position: relative;	
+}
+#break {
+	background-attachment: fixed;
+	background-color: white;
+	background-clip: initial;
+	background-origin: initial;
+	background-size: cover;
+  background-position: 100% 0; 	
+	background-repeat: no-repeat;		
+	min-height: 800px;
+	padding: 2em;
+	position: relative;	
+}
+#skills {
+	background-attachment: fixed;
+	background-color: #202020;
+	background-clip: initial;
+	background-origin: initial;
+	background-size: cover;
+  background-position: 100% 0; 	
+	background-repeat: no-repeat;		
+	min-height: 400px;
+	padding: 2em;
+	position: relative;
+	text-align: center;	
+}
+#skills p {
+	color: #bdbdbd;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: 200;
+	list-style: none;
+	padding: .5em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#skills .list{
+  padding-top: 3em;
+}
+#skills .title{
+  padding-top: 3em;
+}
+.movable {
+	background: url("../images/me1.jpg") no-repeat;
+	border-radius: 150px;
+	min-height: 300px;
+	margin-top: 5em; 
+	width: 300px;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) { 
+	#break{
+		padding: 4em;
+	}	
+	#contact {
+		padding: 2em;
+	}
+	#home {
+		padding: 10em;
+	  padding-top: 15em;
+	}
+	#skills{
+
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) { 
+	#break{
+		padding: 5em;
+	}	
+	#contact {
+		padding: 5em;
+	}
+	#home {
+		padding: 10em;
+	  padding-top: 15em;
+	}
+	#skills{
+		
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) { 
+	#break{
+		padding: 10em;
+	}	
+	#contact {
+		padding: 10em;
+	}
+	#home {
+		padding: 10em;
+	  padding-top: 15em;
+	}
+	#skills{
+		
+	}
+}
