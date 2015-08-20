@@ -1,12 +1,13 @@
 # Portfolio Website
 ###### by Lauren Kroner
 
-##### Technologies Used:
+##### Technologies/Methods Used:
 
  * Constructed with Node/Express
  * Deployed on Heroku
  * Responsive Design Using Bootstrap
- * Design/Style Guide
+ * Design/Style Guide - Sketch
+ * Parallax
 
 ##### To Do's / Upcoming Features:
 
@@ -19,3 +20,4 @@
 
  * [Creative Form Input Field Design](https://medium.com/@saijogeorge/creative-form-input-field-design-examples-bfe5dd50808a)
  * [The Future of User Experience is Visual Design](https://medium.com/@dima_david/the-future-of-user-experience-is-visual-design-af2fc818bc9)
+ * [CSS3 Psuedo Class Selectors](https://css-tricks.com/pseudo-class-selectors/)
