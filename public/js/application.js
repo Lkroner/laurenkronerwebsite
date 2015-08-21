@@ -1,5 +1,37 @@
 
 // -----------------------------------------------------
+//                        Form
+// -----------------------------------------------------
+
+$("form").submit(function(event){
+	event.preventDefault();
+	var formData = {
+        'first_name'        : $('input[name=first_name]').val(),
+        'last_name'         : $('input[name=last_name]').val(),
+        'email'             : $('input[name=email]').val(),
+        'message'    		: $('input[name=message]').val()
+    };
+
+	$("#results").html("Thanks " + formData.first_name + "! Speak soon ;)");
+
+	// $.ajax({
+	//     url: "/",
+	//     type: "get",
+	//     dataType: "json",
+	//     data: formData,
+	//     contentType: "application/json",
+	//     done: function(data) {
+	//       //called when complete
+	//       console.log("Here in done");
+	// 	  $('#results').html(data);
+	//     },
+	//     error: function(Error) {
+	//       console.log(Error);
+	//     },
+	//   });
+});
+
+// -----------------------------------------------------
 //                   Parallax effect
 // -----------------------------------------------------
 
