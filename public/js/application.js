@@ -6,13 +6,19 @@
 $("form").submit(function(event){
 	event.preventDefault();
 	var formData = {
-        'first_name'        : $('input[name=first_name]').val(),
-        'last_name'         : $('input[name=last_name]').val(),
-        'email'             : $('input[name=email]').val(),
-        'message'    		: $('input[name=message]').val()
-    };
+      first_name: $('input[name=first_name]').val(),
+      last_name : $('input[name=last_name]').val(),
+      email    : $('input[name=email]').val(),
+      message   : $('input[name=message]').val()
+  };
+	$.get("/send", formData, function(data) {
+		console.log("Data inside ", data);
+    if(data=="sent")
+      {
+        $("#result").empty().html("Thanks " + first_name + "! Email is been sent at "+ email +" .Please check inbox!");
+      }
 
-	$("#results").html("Thanks " + formData.first_name + "! Speak soon ;)");
+	// $("#results").html("Thanks " + formData.first_name + "! Speak soon ;)");
 
 	// $.ajax({
 	//     url: "/",
@@ -28,7 +34,7 @@ $("form").submit(function(event){
 	//     error: function(Error) {
 	//       console.log(Error);
 	//     },
-	//   });
+	});
 });
 
 // -----------------------------------------------------
