@@ -24,11 +24,18 @@ router.get('/send', function(req, res, next) {
 	
 	// Here we are configuring our SMTP Server details.
 	// STMP is mail server which is responsible for sending and recieving email.
+	if (process.env.NODEMAILER_SERVICE) {
+		console.log(process.env.NODEMAILER_SERVICE);
+	}
+	if (NODEMAILER_SERVICE) {
+		console.log(NODEMAILER_SERVICE);
+	}
+
 	var transporter = nodemailer.createTransport(smtpTransport({
-		service: process.env.NODEMAILER_SERVICE,
+		service: process.env.NODEMAILER_SERVICE || NODEMAILER_SERVICE,
 		auth: {
-			user: process.env.NODEMAILER_USER,
-			pass: process.env.NODEMAILER_PASS
+			user: process.env.NODEMAILER_USER || NODEMAILER_USER,
+			pass: process.env.NODEMAILER_PASS || NODEMAILER_PASS
 		}
 	}));
 
