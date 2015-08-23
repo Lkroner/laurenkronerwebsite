@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
+// var smtpTransport = require('nodemailer-smtp-transport');
+var sgTransport = require('nodemailer-sendgrid-transport');
 
 var path = require("path");
 var url = require('url');
@@ -24,26 +25,26 @@ router.get('/send', function(req, res, next) {
 	
 	// Here we are configuring our SMTP Server details.
 	// STMP is mail server which is responsible for sending and recieving email.
-	if (process.env.NODEMAILER_SERVICE) {
-		console.log("Use env.process", process.env.NODEMAILER_SERVICE);
-		console.log("Use env.process", process.env.NODEMAILER_USER);
-	}
 
-	var transporter = nodemailer.createTransport(smtpTransport({
-		service: JSON.stringify(process.env.NODEMAILER_SERVICE),
+	var options = {
+		service: "Sendgrid",
 		auth: {
-			user: JSON.stringify(process.env.NODEMAILER_USER),
-			pass: JSON.stringify(process.env.NODEMAILER_PASS)
+			api_user: process.env.NODEMAILER_USER,
+			api_key: process.env.NODEMAILER_PASS
 		}
-	}));
+	};
 
-	console.log("What's transporter.service", transporter.service);
+	console.log("Options", options);
+	// login
+	var transporter = nodemailer.createTransport(sgTransport(options));
+
 
 	// ------------------SMTP Over-----------------------------
 
 	var mailOptions = {
 		to: "lauren.kroner@gmail.com",
-		subject: "You got a message from " + req.query.email + "!",
+		from: req.query.email,
+		subject: "You got a message from " + req.query.first_name + "!",
 		text:
 			"Hey Lauren,"
 			// req.query.
@@ -52,6 +53,7 @@ router.get('/send', function(req, res, next) {
 
 	console.log("Here's mailOptions", mailOptions);
 
+	// send mail
 	transporter.sendMail(mailOptions, function(error, response){
 		if (error) {
 			console.log(error);
