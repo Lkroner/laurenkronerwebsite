@@ -12,28 +12,10 @@ $("form").submit(function(event){
       message   : $('input[name=message]').val()
   };
 	$.get("/send", formData, function(data) {
-		console.log("Data inside ", data);
-    if(data=="sent")
-      {
-        $("#result").empty().html("Thanks " + first_name + "! Email is been sent at "+ email +" .Please check inbox!");
-      }
-
-	// $("#results").html("Thanks " + formData.first_name + "! Speak soon ;)");
-
-	// $.ajax({
-	//     url: "/",
-	//     type: "get",
-	//     dataType: "json",
-	//     data: formData,
-	//     contentType: "application/json",
-	//     done: function(data) {
-	//       //called when complete
-	//       console.log("Here in done");
-	// 	  $('#results').html(data);
-	//     },
-	//     error: function(Error) {
-	//       console.log(Error);
-	//     },
+		console.log("Data", data);
+    if( data == "sent") {
+      $("#results").empty().html("Thanks " + formData.first_name + "! Email is been sent at "+ formData.email +" .Please check inbox!");
+    }
 	});
 });
 
