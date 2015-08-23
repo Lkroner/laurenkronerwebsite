@@ -26,6 +26,7 @@ router.get('/send', function(req, res, next) {
 	// STMP is mail server which is responsible for sending and recieving email.
 	if (process.env.NODEMAILER_SERVICE) {
 		console.log("Use env.process", process.env.NODEMAILER_SERVICE);
+		console.log("Use env.process", process.env.NODEMAILER_USER);
 	}
 	if (NODEMAILER_SERVICE) {
 		console.log("Use heroku", NODEMAILER_SERVICE);
@@ -39,6 +40,8 @@ router.get('/send', function(req, res, next) {
 		}
 	}));
 
+	console.log("What's transporter.service", transporter.service);
+
 	// ------------------SMTP Over-----------------------------
 
 	var mailOptions = {
@@ -51,6 +54,7 @@ router.get('/send', function(req, res, next) {
 	};
 
 	console.log("Here's mailOptions", mailOptions);
+
 	transporter.sendMail(mailOptions, function(error, response){
 		if (error) {
 			console.log(error);
