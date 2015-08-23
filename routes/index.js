@@ -28,9 +28,6 @@ router.get('/send', function(req, res, next) {
 		console.log("Use env.process", process.env.NODEMAILER_SERVICE);
 		console.log("Use env.process", process.env.NODEMAILER_USER);
 	}
-	if (NODEMAILER_SERVICE) {
-		console.log("Use heroku", NODEMAILER_SERVICE);
-	}
 
 	var transporter = nodemailer.createTransport(smtpTransport({
 		service: JSON.stringify(process.env.NODEMAILER_SERVICE),
