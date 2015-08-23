@@ -25,10 +25,10 @@ router.get('/send', function(req, res, next) {
 	// Here we are configuring our SMTP Server details.
 	// STMP is mail server which is responsible for sending and recieving email.
 	if (process.env.NODEMAILER_SERVICE) {
-		console.log(process.env.NODEMAILER_SERVICE);
+		console.log("Use env.process", process.env.NODEMAILER_SERVICE);
 	}
 	if (NODEMAILER_SERVICE) {
-		console.log(NODEMAILER_SERVICE);
+		console.log("Use heroku", NODEMAILER_SERVICE);
 	}
 
 	var transporter = nodemailer.createTransport(smtpTransport({
