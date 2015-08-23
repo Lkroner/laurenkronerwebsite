@@ -27,36 +27,55 @@ router.get('/send', function(req, res, next) {
 			api_key: process.env.SENDGRID_PASSWORD
 		}
 	};
-
 	console.log("Options", options);
+
 	// login
 	var transporter = nodemailer.createTransport(sgTransport(options));
 
 
 	// ------------------SMTP Over-----------------------------
 
-	var mailOptions = {
+	var messageNotification = {
 		to: "lauren.kroner@gmail.com",
 		from: req.query.email,
 		subject: "You got a message from " + req.query.first_name + "!",
 		text:
-			"Hey Lauren,"
-			// req.query.
-			// req.query.message
+			"Hi Lauren, \n\n" +
+			"You received a message from LaurenKroner.com. Here are the details: \n\n" +
+			"Name: " + req.query.first_name + "\n\n" +
+			"Email: " + req.query.email + "\n\n" +
+			"Message: " + req.query.message
 	};
 
-	console.log("Here's mailOptions", mailOptions);
+	var messageThankYou = {
+		to: req.query.email,
+		from: "lauren@laurenkroner.com",
+		subject: "Thanks from Laurenkroner.com " + req.query.first_name,
+		text:
+			"Hi there " + req.query.first_name + ",\n\n" +
+			"Thanks for stopping by my site. I'll get back to you as soon as I get a chance :) \n\n" +
+			"Have a good one and speak soon.\n\n" +
+			"Lauren"
+	}
+
+	console.log("Here's messageNotification", messageNotification);
 
 	// send mail
-	transporter.sendMail(mailOptions, function(error, response){
+	transporter.sendMail(messageNotification, function(error, response){
 		if (error) {
 			console.log(error);
 		} else {
 			console.log("Message sent: " + JSON.stringify(response));
-			res.end("sent");
+			transporter.sendMail(messageThankYou, function(error, response){
+				if (error) {
+					console.log(error);
+				} else {
+					console.log("Message sent: " + JSON.stringify(response));
+					res.end("sent");
+				}
+			});
 		}
 	});
-
 });
 
 
