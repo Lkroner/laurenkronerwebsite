@@ -29,8 +29,8 @@ router.get('/send', function(req, res, next) {
 	var options = {
 		service: "Sendgrid",
 		auth: {
-			api_user: process.env.NODEMAILER_USER,
-			api_key: process.env.NODEMAILER_PASS
+			api_user: process.env.SENDGRID_USERNAME,
+			api_key: process.env.SENDGRID_PASSWORD
 		}
 	};
 
