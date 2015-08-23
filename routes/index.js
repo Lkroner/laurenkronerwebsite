@@ -38,7 +38,7 @@ router.get('/send', function(req, res, next) {
 		to: "lauren.kroner@gmail.com",
 		subject: "You got a message from " + req.query.email + "!",
 		text:
-			// "Hey Lauren," +
+			"Hey Lauren,"
 			// req.query.
 			// req.query.message
 	};
