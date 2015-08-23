@@ -7,14 +7,14 @@ $("form").submit(function(event){
 	event.preventDefault();
 	var formData = {
       first_name: $('input[name=first_name]').val(),
-      last_name : $('input[name=last_name]').val(),
+      last_name: $('input[name=last_name]').val(),
       email    : $('input[name=email]').val(),
       message   : $('input[name=message]').val()
   };
 	$.get("/send", formData, function(data) {
 		console.log("Data", data);
     if( data == "sent") {
-      $("#results").empty().html("Thanks " + formData.first_name + "! Email is been sent at "+ formData.email +" .Please check inbox!");
+      $("#results").empty().html("Thanks " + formData.first_name + ". I'll get back to you soon." );
     }
 	});
 });

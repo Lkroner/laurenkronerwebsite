@@ -18,9 +18,8 @@ router.get('/', function(request, res, next) {
 // GET /send - Will send email via nodemailer SMTP transporter.
 router.get('/send', function(req, res, next) {
 	
-	// Here we are configuring our SMTP Server details.
+	// Here we are configuring our Sendgrid/Nodemailer SMTP Server details.
 	// STMP is mail server which is responsible for sending and recieving email.
-
 	var options = {
 		service: "Sendgrid",
 		auth: {
