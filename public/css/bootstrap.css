@@ -3574,7 +3574,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
-  padding-left: 0;
+  /*padding-left: 0;*/
   margin-bottom: 0;
   list-style: none;
 }
@@ -3587,7 +3587,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  /*padding: 10px 15px;*/
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4090,11 +4090,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-text.navbar-right:last-child {
     margin-right: 0;
+    /*padding-bottom: 4em;*/
   }
 }
 .navbar-default {
   background-color: white;
-  padding: 2em;
+  padding: 1em;
 }
 .navbar-default .navbar-brand {
   color: #777;

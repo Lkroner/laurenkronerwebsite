@@ -20,6 +20,7 @@ footer .right {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 80pt;
 	text-shadow: 3px 3px #202020;
+	padding-bottom: 6%;
 }
 .chart-container {
 	padding: 1em;
@@ -99,6 +100,7 @@ footer .right {
 	color: white;
 	font-family: "Open Sans", Helvetica, sans-serif;
 	font-weight: 400;
+	padding-bottom: 3%;
 	text-shadow: 1px 1px #202020;
 }
 #home {
@@ -192,16 +194,34 @@ footer .right {
 	margin-top: 5em; 
 	width: 300px;
 }
-
-
+.my-nav {
+	padding: 2em;
+}
 /* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+@media screen and (max-width: 768px) {
+	.navbar-fixed-top {
+		min-height: 14%
+	}
+	.big-intro {
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 36pt;
+		text-shadow: 3px 3px #202020;
+		padding-bottom: 5%;
+	}
+	.circle-picture {
+		padding: 3em;
+	}
+	.intro {
+		padding-bottom: 5%;
+	}
+}
 
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) { 
 	#break{
 		padding: 4em;
-	}	
+	}
 	#contact {
 		padding: 2em;
 	}
@@ -209,39 +229,45 @@ footer .right {
 		padding: 10em;
 	  padding-top: 15em;
 	}
-	#skills{
-
-	}
 }
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) { 
 	#break{
 		padding: 5em;
-	}	
+	}
 	#contact {
 		padding: 5em;
 	}
 	#home {
 		padding: 10em;
 	  padding-top: 15em;
-	}
-	#skills{
-		
 	}
 }
 /* Large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) { 
 	#break{
 		padding: 10em;
-	}	
+	}
 	#contact {
 		padding: 10em;
 	}
 	#home {
 		padding: 10em;
 	  padding-top: 15em;
+	  min-height: 800px;
 	}
-	#skills{
-		
+}
+/* Large devices (large desktops, 1500px and up) */
+@media screen and (min-width: 1700px) {
+	#break{
+		padding: 10em;
+	}
+	#contact {
+		padding: 10em;
+	}
+	#home {
+		padding: 10em;
+	  padding-top: 15em;
+	  min-height: 900px;
 	}
 }
